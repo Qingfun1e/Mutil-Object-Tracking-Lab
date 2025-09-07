@@ -1,0 +1,21 @@
+model:
+  name: "models/yolov8s.pt"
+  conf_threshold: 0.45
+  device: "auto"   # auto / cuda / cpu
+
+tracker:
+  max_age: 3
+  min_hits: 5
+  iou_threshold: 0.3
+
+video:
+  type: "video"   # video / webcam / rtsp
+  source: "videos/test_videos5.mp4"
+
+system:
+  frame_queue_size: 60
+  detection_queue_size: 10
+  cap_fps: 60
+
+playback:
+  initial_speed: 1.0
